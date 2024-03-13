@@ -14,7 +14,7 @@ let employee = {
 
 for(let key in employee){
     if(typeof employee[key] === 'number'){
-        employee[key] += 2;
+        employee[key] *= 2;
     }
 }
 
