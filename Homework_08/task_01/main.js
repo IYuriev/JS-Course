@@ -2,7 +2,9 @@
 
 let array = [2, 7, 6, 3, 9, 1, 4, 5, 8, 10];
 
-console.log(...array);
+let res = array.forEach((element) => {
+    console.log(element);
+});
 
 let arrayMultipliedByFive = array.map((item) => {
     return item * 5;
