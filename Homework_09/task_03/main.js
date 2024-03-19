@@ -11,10 +11,8 @@ let aclean = () => {
             map.set(sortedItem, item);
         }
     })
-    map.forEach((value) => {
-        console.log(value);
-    });
-    
+    let mapValues = map.values();
+    return Array.from(mapValues);
 }
 
-aclean(array);
+console.log(aclean(array));
