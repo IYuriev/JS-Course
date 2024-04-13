@@ -1,14 +1,16 @@
 "use strict"
 
 function delay(fn, sec) {
-    return setTimeout(() => {
-        fn();
-    }, sec * 1000);
+    return function() {
+        setTimeout(fn, sec * 1000);
+    };
 }
 
 function sayHi() {
-	console.log("Hi!");
+    console.log("Hi!");
 }
 
+const delayedSayHi = delay(sayHi, 5);
+
 sayHi();
-delay(sayHi, 3);
+delayedSayHi();

@@ -6,7 +6,9 @@ const cook = (customers) => {
         let time = 0;
         for (const item of customers[name]) {
             array.push(item.name);
-            time += item.time;
+            if (item.time > time) {
+                time = item.time;
+            }
         }
         setTimeout(() => {
             console.log(`Шановний відвідувач, ${name} ваше замовлення готове: ${array.join(', ')}. Смачного!`)
